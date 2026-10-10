@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Image Gallery</h1>
+    <p>Click any picture to see it larger.</p>
+  </header>
+
+  <main>
+    <div class="gallery">
+
+      <button type="button" class="thumb">
+        <img src="images/estevao.jpeg" alt=" the day Estevao dismantled Barcelona" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/msn.jpeg" alt="The prime MSN at Barcelona, it was pick" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/messi.jpeg" alt="Lionel Messi celebrating his first world cup victory" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/chelsea.jpeg" alt="collection of chelsea's matches" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/olise.jpeg" alt="Olise flexing with his man of the match award" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/lamine.jpeg" alt="City Lamine celebrating a goal" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/mn.jpeg" alt="Messi and Neymar representing their countries" width="1200" height="800" loading="lazy">
+      </button>
+
+      <button type="button" class="thumb">
+        <img src="images/ppr.jpeg" alt="Palmer, Rogers and Reece on the cold celebration" width="1200" height="800" loading="lazy">
+      </button>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Images: simple illustrations made for this project.</p>
+  </footer>
+
+  <!-- The preview (hidden until a picture is clicked) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button type="button" class="close" id="close" aria-label="Close preview">&times;</button>
+    <figure>
+      <img id="lightbox-img" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

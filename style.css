@@ -1,0 +1,161 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f3f7fc;
+  color: #16325c;
+}
+
+/* Page stops scrolling while the preview is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 24px;
+}
+
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #1f5fbf;
+}
+
+header p {
+  margin-top: 6px;
+  color: #6b7a90;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+}
+
+/* The gallery: CSS Grid. Columns fill the width, each at least 220px wide */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+/* Each picture is a button, so it works with the keyboard too */
+.thumb {
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.thumb:hover img {
+  transform: scale(1.06);
+}
+
+.thumb:focus-visible {
+  outline: 3px solid #1f5fbf;
+  outline-offset: 3px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 20px 30px;
+  font-size: 0.85rem;
+  color: #6b7a90;
+}
+
+/* ---------- Preview (lightbox) ---------- */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(10, 25, 50, 0.92);
+}
+
+/* Without this line, display: flex would stop the hidden attribute from working */
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox figure {
+  width: 100%;
+  max-width: 900px;
+}
+
+.lightbox img {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.lightbox figcaption {
+  margin-top: 12px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  font-size: 2rem;
+  line-height: 1;
+  color: #ffffff;
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.close:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Phones: always two columns */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  main {
+    padding: 10px 12px 24px;
+  }
+}
