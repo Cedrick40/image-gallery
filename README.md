@@ -41,7 +41,7 @@ To practice CSS Grid, responsive layouts, JavaScript click events, and basic UI 
 
 ## Images
 
-The 8 images are simple illustrations made for this project: estevao, msn, messi, chelsea, olise, lamine, mn, and ppr. Each has alt text that describes what it shows.
+The 8 images are football photos collected for this learning project, and they belong to their original owners: estevao, msn, messi, chelsea, olise, lamine, mn, and ppr. Each has alt text that describes what it shows.
 
 ## Project structure
 
